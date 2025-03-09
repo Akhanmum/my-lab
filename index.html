@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script> <!-- JavaScript file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+    <title>Ali's Portfolio</title>
+</head>
+<body>
+
+<header>
+    <h1><a href="/index.html" style="color: #fff; text-decoration: none;">Ali's <span style="color: tomato;">Web Lab</span></a>  </h1>
+    <nav class="navbar">
+        <ul id="nav-links"> <!-- ✅ Added ID here -->
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#blogs">BLOGS</a></li>
+        </ul>
+
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </nav>
+</header>
+
+<section id="home">
+  <div class="home-content">
+    <h1><span id="typed-text"></span></h1>
+      <p>Turning ideas into reality with creativity and technology.</p>
+      <a href="#portfolio" class="btn">Explore My Work</a>
+  </div>
+</section>
+
+
+<section id="about">
+  <div class="about-container">
+      
+      <!-- Left Side: Image with Spinning Border -->
+      <div class="about-image">
+        <div class="loader"></div> <!-- Only the border rotates -->
+        <img class="about-img" src="/assets/images/developer.jpg" alt="Your Image"> <!-- Image stays still -->
+    </div>
+
+      <!-- Right Side: About Text -->
+      <div class="about-text">
+          <h2>About Me</h2>
+          <p>
+              I am a passionate **Front-End Developer** with **3 years of experience** in crafting modern, responsive, and interactive web applications.  
+              Skilled in **HTML, CSS, JavaScript, React.js, and Tailwind CSS**, I build user-friendly designs that are both stunning and functional.  
+              I love solving problems, optimizing performance, and staying updated with the latest web technologies.  
+              Let’s create something innovative together!
+          </p>
+
+          <h3>Skills:</h3>
+          <ul class="skills-list">
+              <li>HTML5</li>
+              <li>CSS3 (SASS, Tailwind)</li>
+              <li>JavaScript (ES6+)</li>
+              <li>React.js</li>
+              <li>Next.js</li>
+              <li>Responsive Design</li>
+              <li>Git & GitHub</li>
+              <li>UI/UX Principles</li>
+          </ul>
+      </div>
+
+  </div>
+</section>
+
+
+
+
+<section id="portfolio">
+    <h2 class="portfolio-title">My Portfolio</h2>
+    <div class="portfolio-container">
+        <!-- Project 1: Weather App -->
+        <div class="project" onclick="openModal('weatherModal')">
+            <div class="project-img">
+                <img src="assets/images/weather.PNG" alt="Weather App">
+            </div>
+            <div class="project-info">
+                <h3>Weather Web App</h3>
+                <p>A modern web design project.</p>
+                <button class="know-more">Know More</button>
+            </div>
+        </div>
+
+        <!-- Project 2: Hotel Booking -->
+        <div class="project" onclick="openModal('hotelModal')">
+            <div class="project-img">
+                <img src="assets/images/hotel.PNG" alt="Hotel Booking">
+            </div>
+            <div class="project-info">
+                <h3>Hotel Booking System</h3>
+                <p>A creative booking system.</p>
+                <button class="know-more">Know More</button>
+            </div>
+        </div>
+
+        <!-- Project 3: Tic-Tac-Toe Game -->
+        <div class="project" onclick="openModal('gameModal')">
+            <div class="project-img">
+                <img src="/assets/images/tic tac.PNG" alt="Tic Tac Toe Game">
+            </div>
+            <div class="project-info">
+                <h3>Tic-Tac-Toe Game</h3>
+                <p>A fun interactive game.</p>
+                <button class="know-more">Know More</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pop-Up Modals -->
+<div id="weatherModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('weatherModal')">&times;</span>
+        <h2>Weather Web App</h2>
+        <p>A modern web application that provides live weather updates using API integration. <br>
+        
+            WeatherX is a modern weather web app that provides real-time weather updates with a sleek responsive UI. Built using HTML, CSS, JavaScript, React.js, and OpenWeatherMap API, it features dynamic backgrounds, dark mode, and a 5-day forecast. Users can search any city worldwide or enable location access for instant weather details. The app ensures a seamless experience with API integration, interactive UI components, and smooth animations. Deployed using Netlify/Vercel, it offers an intuitive, accessible, and engaging weather-tracking solution. 🚀🌦️
+        
+        </p>
+    </div>
+</div>
+
+<div id="hotelModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('hotelModal')">&times;</span>
+        <h2>Hotel Booking System</h2>
+        <p>Designed for seamless hotel reservations with user-friendly UI and secure transactions. 
+        
+        <br>
+
+
+        StayEase is a modern hotel booking web app that lets users search, filter, and book hotels seamlessly. Built with React.js, Node.js, Express, and MongoDB, it features real-time availability, secure payments (Stripe/PayPal), and user authentication (JWT/Firebase). The app includes an admin panel for managing bookings, hotels, and reviews while offering a mobile-friendly, intuitive experience. Integrated with Google Maps API, it enhances location-based searches for a smoother reservation process. 🚀🏨
+        
+        </p>
+    </div>
+</div>
+
+<div id="gameModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('gameModal')">&times;</span>
+        <h2>Tic-Tac-Toe Game</h2>
+        <p>A classic Tic-Tac-Toe game built with JavaScript for interactive gameplay.
+
+<br>
+
+
+Tic-Tac-Toe Pro is a modern and interactive game built using HTML, CSS, and JavaScript (or React.js for a dynamic experience). It features a clean UI, smooth animations, and real-time game logic for player vs. player or AI mode. The game includes win detection, score tracking, and a reset option, ensuring a fun and engaging experience. Optimized for mobile and desktop, it offers responsive gameplay with intuitive controls. 🚀🎮
+
+
+
+        </p>
+    </div>
+</div>
+
+
+
+
+<section id="services">
+  <div class="services-wrapper">
+      <h2 class="section-title" style="font-size: 30px;">Our Services</h2>
+      <div class="services-container">
+          <div class="service-card">
+              <img src="/assets/images/front end.PNG" alt="Frontend Development">
+              <h3>Frontend Development</h3>
+              <p>Building modern, responsive, and interactive websites with HTML, CSS, JavaScript, and frameworks like React and Vue.</p>
+          </div>
+          <div class="service-card">
+              <img src="/assets/images/back end.PNG" alt="Backend Development">
+              <h3>Backend Development</h3>
+              <p>Creating secure, scalable server-side applications using Node.js, Express, PHP, Python, and databases like MongoDB & MySQL.</p>
+          </div>
+          
+          <div class="service-card">
+              <img src="/assets/images/seo.PNG" alt="SEO Optimization">
+              <h3>SEO Optimization</h3>
+              <p>Boosting search rankings through on-page & off-page SEO, speed optimization, and mobile-friendly design strategies.</p>
+          </div>
+          <div class="service-card">
+              <img src="/assets/images/wed development.PNG" alt="Web App Development">
+              <h3>Web App Development</h3>
+              <p>Creating dynamic and scalable web applications using React, Angular, and modern full-stack technologies.</p>
+          </div>
+          <div class="service-card">
+              <img src="/assets/images/website maintain.PNG" alt="Website Maintenance">
+              <h3>Website Maintenance</h3>
+              <p>Ensuring security, updates, bug fixes, and feature enhancements to keep your website running smoothly.</p>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+
+<section id="blogs">
+    <h2 class="blogs-title">Latest Blogs</h2>
+    <div class="blog-container">
+        
+        <!-- Blog 1 -->
+        <div class="blog-card">
+            <img src="/assets/images/blog1.PNG" alt="Frontend Development">
+            <div class="blog-content">
+                <h3>Mastering Frontend Development</h3>
+                <p>Discover best practices and modern frameworks like React, Vue, and Angular.</p>
+                <p class="client-comment">💬 "Amazing insights! Helped me a lot." - Alex</p>
+            </div>
+        </div>
+
+        <!-- Blog 2 -->
+        <div class="blog-card">
+            <img src="/assets/images/blog2.PNG" alt="Backend Development">
+            <div class="blog-content">
+                <h3>Backend Development Trends</h3>
+                <p>Learn how Node.js, Python, and databases power today's web applications.</p>
+                <p class="client-comment">💬 "A must-read for developers!" - Emily</p>
+            </div>
+        </div>
+
+        <!-- Blog 3 -->
+        <div class="blog-card">
+            <img src="/assets/images/blog3.PNG" alt="SEO Strategies">
+            <div class="blog-content">
+                <h3>SEO Strategies for 2024</h3>
+                <p>Boost your website's ranking with the latest SEO trends and techniques.</p>
+                <p class="client-comment">💬 "My site's traffic doubled!" - Michael</p>
+            </div>
+        </div>
+
+        <!-- Blog 4 -->
+        <div class="blog-card">
+            <img src="/assets/images/blo4.PNG" alt="Scalable Apps">
+            <div class="blog-content">
+                <h3>Building Scalable Web Apps</h3>
+                <p>Architect your applications with scalability and performance in mind.</p>
+                <p class="client-comment">💬 "Helped me scale my startup!" - Sarah</p>
+            </div>
+        </div>
+
+        <!-- Blog 5 -->
+        <div class="blog-card">
+            <img src="/assets/images/blog5.PNG" alt="Cybersecurity">
+            <div class="blog-content">
+                <h3>Cybersecurity Best Practices</h3>
+                <p>Protect your online presence with top security tips and strategies.</p>
+                <p class="client-comment">💬 "Great for securing personal data." - John</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-contact">
+            <a href="mailto:usetech6@gmail.com" target="_blank">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+917506294298" target="_blank">
+                <i class="fas fa-phone"></i>
+            </a>
+            <a href="https://wa.me/917506294298" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+        <div class="footer-copy">
+            <p>© 2024 Ali's Web Lab. All Rights Reserved. <span class="heart">❤️</span></p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="script.js"></script> <!-- ✅ Ensure the correct path -->
+
+<script>
+
+
+function toggleMenu() {
+    let menu = document.getElementById("nav-links");
+    menu.classList.toggle("active"); // ✅ Now correctly toggles the menu
+}
+
+
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  // Define five colors
+  const colors = ["#ff5733", "#33ff57", "#3357ff", "#f4c20d", "#a833ff"];
+  let colorIndex = 0;
+
+  var typed = new Typed("#typed-text", {
+    strings: [
+      "Innovate. Create. Elevate.",
+      "Design. Develop. Deliver.",
+      "Crafting Pixel-Perfect Experiences.",
+      "Where Creativity Meets Code.",
+      "Building the Web, One Line at a Time.",
+      "Bringing Ideas to Life with Code.",
+      "Interactive. Intuitive. Impactful.",
+      "Code with Passion, Design with Purpose.",
+      "Transforming Ideas into Digital Reality.",
+      "Web Magic, One Pixel at a Time.",
+      "Front-End Innovation, User-Centric Creation."
+    ], 
+    typeSpeed: 100, 
+    backSpeed: 50, 
+    backDelay: 1000, 
+    startDelay: 500, 
+    loop: true,
+    onStringTyped: function() { 
+      // Change text color after each string is typed
+      colorIndex = (colorIndex + 3) % colors.length;
+      document.querySelector("#typed-text").style.color = colors[colorIndex];
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
+<script>
+    function openModal(modalId) {
+    document.getElementById(modalId).style.display = "flex";
+}
+
+function closeModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
+}
+
+// Close modal when clicking outside content
+window.onclick = function(event) {
+    document.querySelectorAll(".modal").forEach(modal => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+};
+
+</script>
+
+
+<script src="script.js"></script>
+
+
+
+
+</body>
+</html>
